@@ -1,0 +1,42 @@
+.login-signup-block{
+    padding: 50px 10px;
+    position: absolute;
+    width: 336px;
+    height: 363px;
+    right: 10%;
+    top: 40%; 
+    background-color: #5B9DCF;                                                                                                                                                                                                                             
+}
+input[type="text"]{
+    background: #CADBE9;
+    outline:none;
+    border:none;
+    width:70%;
+    height: 40px;
+    margin: 15px 0px;
+    font-size: 18px;
+    color: #1381D6;
+    padding: 10px;
+    text-align: center;
+}
+input[type="text"]::placeholder{
+    color: #1381D6;
+    text-align: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+}
+button{
+    background: #C44445;
+    border: none;
+    outline: none;
+    width:55%;
+    height: 40px;
+    margin: 20px 0px 15px;
+    color:#fff;
+    font-size: 18px;
+}
+button:hover{
+    box-shadow: 4px 6px 8px #888888; 
+}
+.sign-up-link{
+    color: #024A81;
+    cursor: pointer;
+}
