@@ -2,12 +2,13 @@
     padding: 50px 10px;
     position: absolute;
     width: 336px;
-    height: 363px;
+    height: 400px;
     right: 10%;
     top: 18%; 
-    background-color: #5B9DCF;                                                                                                                                                                                                                             
+    background-color: #0f4f7f; 
+    border-radius: 40px;                                                                                                                                                                                                                            
 }
-input[type="text"]{
+input{
     background: #CADBE9;
     outline:none;
     border:none;
@@ -18,8 +19,9 @@ input[type="text"]{
     color: #1381D6;
     padding: 10px;
     text-align: center;
+    
 }
-input[type="text"]::placeholder{
+input::placeholder{
     color: #1381D6;
     text-align: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 }
@@ -37,8 +39,20 @@ button:hover{
     box-shadow: 4px 6px 8px #888888; 
 }
 .sign-up-link{
-    color: #024A81;
+    color: #0c94f7;
     cursor: pointer;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: inherit; 
+    border-color: none; 
+}
+.alert{
+    border: none;
+    padding: 0;
+}
+p{
+    color:#fff;
 }
 
 
