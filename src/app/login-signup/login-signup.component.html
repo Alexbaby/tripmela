@@ -1,6 +1,7 @@
 <div class="login-signup-block">
-<input type="text" placeholder="User Name">
-<input type="text" placeholder="Password">
-<button type="button">Login</button>
+<input type="text" placeholder="User Name" [(ngModel)]="login.user_name" name="user_name" id>
+<input type="password" placeholder="Password"  [(ngModel)]="login.user_password" name="user_password">
+<button type="button" (click)="login_info(login);">Login</button>
 <p>Not a member? <a class="sign-up-link">Sign up</a> now</p>
 </div>
+
