@@ -4,7 +4,7 @@
     width: 336px;
     height: 363px;
     right: 10%;
-    top: 40%; 
+    top: 18%; 
     background-color: #5B9DCF;                                                                                                                                                                                                                             
 }
 input[type="text"]{
@@ -65,7 +65,7 @@ button:hover{
         left: 50%;
         right: 0;
         transform: translate(-50%);
-        top: 25%;
+        top: 15%;
         background-color: #5B9DCF;
     }
 }

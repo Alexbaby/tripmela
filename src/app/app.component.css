@@ -20,7 +20,21 @@
     position: absolute;
     top: 110px;
     z-index: 1;
-    
+}
+.header-info{
+    position: absolute;
+    left: 5%;
+    color: #fff;
+    width: 60%;
+    top: 35%;
+    text-align: left;
+}
+.header-info h1{
+    margin-bottom:50px;
+    font-size: 48px;
+}
+.header-info h3{
+    font-size: 28px;
 }
 
 
