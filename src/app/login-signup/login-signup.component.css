@@ -40,3 +40,32 @@ button:hover{
     color: #024A81;
     cursor: pointer;
 }
+
+
+/*Media */
+
+@media(max-width:1020px) and (max-height:800px){
+    .login-signup-block{
+        padding: 50px 10px;
+        position: absolute;
+        width: 336px;
+        height: 363px;
+        right: 10%;
+        top: 25%;
+        background-color: #5B9DCF;
+    }
+    
+}
+@media(max-width:400px){
+    .login-signup-block{
+        padding: 50px 10px;
+        position: absolute;
+        width: 336px;
+        height: 363px;
+        left: 50%;
+        right: 0;
+        transform: translate(-50%);
+        top: 25%;
+        background-color: #5B9DCF;
+    }
+}
