@@ -17,7 +17,7 @@ export class LoginSignupComponent implements OnInit {
   }
   // login model
   login:any={
-    user_name:"",
+    user_email:"",
     user_password:""
   }
   // login function of user
