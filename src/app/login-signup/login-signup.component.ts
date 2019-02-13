@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import{ Router} from '@angular/router';
+import { login} from '../models/login';
+
 
 @Component({
   selector: 'app-login-signup',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginSignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
 
   ngOnInit() {
   }
+  // login model
+  login:any={
+    user_email:"",
+    user_password:""
+  }
+  // login function of user
+  login_info(login) {
+    console.log("logged user data",login);
 
+  }
 }
