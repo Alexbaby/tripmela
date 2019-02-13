@@ -1,7 +1,25 @@
 <div class="login-signup-block">
-<input type="text" placeholder="User Name" [(ngModel)]="login.user_name" name="user_name" id>
-<input type="password" placeholder="Password"  [(ngModel)]="login.user_password" name="user_password">
-<button type="button" (click)="login_info(login);">Login</button>
-<p>Not a member? <a class="sign-up-link">Sign up</a> now</p>
-</div>
 
+    <input type="text" [(ngModel)]="login.user_name" name="user_name" id="user_name" required #user_name="ngModel">
+
+    <div *ngIf="user_name.invalid && (user_name.dirty || user_name.touched)" class="alert alert-danger">
+
+        <div *ngIf="user_name.errors.required">
+            Name is required.
+        </div>
+    </div>
+
+    <input type="password" [(ngModel)]="login.user_password" name="user_password" id="user_password" required #user_password="ngModel">
+
+    <div *ngIf="user_password.invalid && (user_password.dirty || user_password.touched)" class="alert alert-danger">
+
+        <div *ngIf="user_password.errors.required">
+            password is required
+        </div>
+    </div>
+
+    <button type="button" (click)="login_info(login);">Login</button>
+    <p>Not a member?
+        <a class="sign-up-link">Sign up</a> now</p>
+
+</div>

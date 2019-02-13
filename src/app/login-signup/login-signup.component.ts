@@ -22,7 +22,6 @@ export class LoginSignupComponent implements OnInit {
   }
   // login function of user
   login_info(login) {
-    console.log("data",login);
     console.log("logged user data",login);
 
   }
