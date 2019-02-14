@@ -1,0 +1,52 @@
+<div class="login-signup-block">
+
+  <input type="email" [(ngModel)]="login.user_email" name="user_email" id="user_email" required #user_email="ngModel" placeholder="Enter name"pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+
+  <div *ngIf="user_email.invalid && (user_email.dirty || user_email.touched)" class="alert alert-danger">
+
+      <p *ngIf="user_email.errors.required">
+          email is required. 
+      </p>
+  </div>
+
+  <input type="password" [(ngModel)]="login.user_password" name="user_password" id="user_password" required #user_password="ngModel" placeholder="Enter email" pattern="">
+
+  <div *ngIf="user_password.invalid && (user_password.dirty || user_password.touched)" class="alert alert-danger">
+
+      <p *ngIf="user_password.errors.required">
+          password is required
+      </p>
+  </div>
+
+  <input type="email" [(ngModel)]="login.user_email" name="user_email" id="user_email" required #user_email="ngModel" placeholder="Enter phone"pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+
+  <div *ngIf="user_email.invalid && (user_email.dirty || user_email.touched)" class="alert alert-danger">
+
+      <p *ngIf="user_email.errors.required">
+          email is required. 
+      </p>
+  </div>
+
+  <input type="password" [(ngModel)]="login.user_password" name="user_password" id="user_password" required #user_password="ngModel" placeholder="Enter password" pattern="">
+
+  <div *ngIf="user_password.invalid && (user_password.dirty || user_password.touched)" class="alert alert-danger">
+
+      <p *ngIf="user_password.errors.required">
+          password is required
+      </p>
+  </div>
+
+  <input type="password" [(ngModel)]="login.user_password" name="user_password" id="user_password" required #user_password="ngModel" placeholder="Confirm password" pattern="">
+
+  <div *ngIf="user_password.invalid && (user_password.dirty || user_password.touched)" class="alert alert-danger">
+
+      <p *ngIf="user_password.errors.required">
+          password is required
+      </p>
+  </div>
+
+  <button type="button" (click)="login_info(login);">Login</button>
+  <p>Already a member?
+      <a class="sign-up-link">Login</a> now</p>
+
+</div>

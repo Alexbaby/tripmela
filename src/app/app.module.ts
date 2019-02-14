@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { FormsModule } from '@angular/forms';
+import { SignupLoginComponent } from './signup-login/signup-login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    SignupLoginComponent
   ],
   imports: [
     BrowserModule,
