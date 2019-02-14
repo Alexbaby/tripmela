@@ -1,5 +1,6 @@
 <div class="login-signup-block">
 
+<<<<<<< HEAD
     <input type="email" [(ngModel)]="login.user_email" name="user_email" id="user_email" required #user_email="ngModel" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
 
     <div *ngIf="user_email.invalid && (user_email.dirty || user_email.touched)" class="alert alert-danger">
@@ -7,6 +8,15 @@
         <div *ngIf="user_email.errors.required">
             email is required. 
         </div>
+=======
+    <input type="email" [(ngModel)]="login.user_email" name="user_email" id="user_email" required #user_email="ngModel" placeholder="Enter email"pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+
+    <div *ngIf="user_email.invalid && (user_email.dirty || user_email.touched)" class="alert alert-danger">
+
+        <p *ngIf="user_email.errors.required">
+            email is required. 
+        </p>
+>>>>>>> 74288da238fdd0d171b0eeaeb29d27861b22b3fb
     </div>
 
     <input type="password" [(ngModel)]="login.user_password" name="user_password" id="user_password" required #user_password="ngModel" placeholder="Enter password" pattern="">
