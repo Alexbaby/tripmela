@@ -1,11 +1,11 @@
 <div class="login-signup-block">
 
-    <input type="email" [(ngModel)]="login.user_email" name="user_email" id="user_email" required #user_email="ngModel">
+    <input type="email" [(ngModel)]="login.user_email" name="user_email" id="user_email" required #user_email="ngModel" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
 
     <div *ngIf="user_email.invalid && (user_email.dirty || user_email.touched)" class="alert alert-danger">
 
         <div *ngIf="user_email.errors.required">
-            email is required.
+            email is required. 
         </div>
     </div>
 
