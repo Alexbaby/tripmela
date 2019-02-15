@@ -1,12 +1,10 @@
 .login-signup-block{
     padding: 50px 10px;
-    position: absolute;
     width: 336px;
     height: 400px;
-    right: 10%;
-    top: 18%; 
     background-color: #0f4f7f; 
-    border-radius: 40px;                                                                                                                                                                                                                            
+    border-radius: 40px;  
+    text-align: center;                                                                                                                                                                                                                          
 }
 input{
     background: #CADBE9;
@@ -37,7 +35,7 @@ button{
     font-size: 18px;
 }
 button:hover{
-    box-shadow: 4px 6px 8px #888888; 
+    box-shadow: 4px 6px 8px #3c33336b; 
 }
 .sign-up-link{
     color: #0c94f7;
