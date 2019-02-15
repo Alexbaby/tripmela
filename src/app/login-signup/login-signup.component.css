@@ -1,4 +1,6 @@
 .login-signup-block{
+    float: right;
+    margin: 50px;
     padding: 50px 10px;
     width: 336px;
     height: 400px;
@@ -6,6 +8,7 @@
     border-radius: 40px;  
     text-align: center;                                                                                                                                                                                                                          
 }
+
 input{
     background: #CADBE9;
     outline:none;
@@ -18,7 +21,6 @@ input{
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    
 }
 input::placeholder{
     color: #1381D6;
