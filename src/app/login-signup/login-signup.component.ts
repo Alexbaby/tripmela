@@ -11,15 +11,17 @@ import { login} from '../models/login';
 export class LoginSignupComponent implements OnInit {
 
   constructor(private router:Router) { }
-
+  
 
   ngOnInit() {
+    
   }
   // login model
   login:any={
     user_email:"",
     user_password:""
   }
+   id = 0;
   // login function of user
   login_info(login) {
     console.log("logged user data",login);

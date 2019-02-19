@@ -8,7 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { FormsModule } from '@angular/forms';
 import { SignupLoginComponent } from './signup-login/signup-login.component';
-
+import { RouterModule}  from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { SignupLoginComponent } from './signup-login/signup-login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
     // ReactiveFormsModule  
   ],
   providers: [],
