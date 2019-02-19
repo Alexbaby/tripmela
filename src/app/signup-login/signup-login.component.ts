@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{ Router} from '@angular/router';
 @Component({
   selector: 'app-signup-login',
   templateUrl: './signup-login.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+  id = 1;
+ 
 
+  
 }
