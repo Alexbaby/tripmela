@@ -23,7 +23,7 @@ export class LoginSignupComponent implements OnInit {
   }
    id = 0;
   // login function of user
-  login_info(login) {
+    login_info(login) {
     console.log("logged user data",login);
 
   }
