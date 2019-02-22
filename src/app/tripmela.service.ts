@@ -9,17 +9,24 @@ import { register } from './models/register';
 })
 export class TripmelaService {
 
-  // login: login[];
-  // register: register[];
+  login: login[];
+  register: register[];
 
   constructor(private router: Router, private http: HttpClient) { }
 
-//   signup(data) {
-//   console.log('user registration',data);
-//   // let url = "api/trip/register";
-  
- 
-// }
+  signup(data) {
+    console.log('user registration', data);
+    let body = data;
+    let url = "api/trip/register";
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    };
+    return this.http.post(url, body, httpOptions);
+
+  }
+
 }
 
 

@@ -1,6 +1,6 @@
 {
- "/api/*": {
-   "target": "http:localhost/training/trip/backend/web/",
+ "/api/": {
+   "target": "http://localhost/trip/trip_backend/backend/web/",
    "secure": false,
    "changeOrigin": true,
    "pathRewrite": {"^/api" : ""}

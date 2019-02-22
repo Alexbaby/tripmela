@@ -11,16 +11,16 @@ import { TripmelaService } from '../tripmela.service';
 })
 export class SignupLoginComponent implements OnInit {
 
-  constructor(private router: Router,private TripmelaService:TripmelaService) { }
+  constructor(private router: Router, private TripmelaService: TripmelaService) { }
    id = 1;
-  register: register = {
+   register: register = {
     name: '',
     email: '',
     phone: '',
-    password1: '',
-    password2: ''
+    password: ''
+
   };
-  
+
   username;
   emailvallidation;
   userphone;
@@ -30,28 +30,38 @@ export class SignupLoginComponent implements OnInit {
 
   errors = {
 
-        username:{
-                     name_error:'pleasse enter the name',
-                 },
+    username: {
+      name_error: 'pleasse enter the name',
+    },
 
-          email: { 
-                    email_not_valid: 'not a valid email',             
-                 },
+    email: {
+      email_not_valid: 'not a valid email',
+    },
 
-        password: {
-                    password_error: 'password mis match'
-                  }
-           };
+    password: {
+      password_error: 'password mis match'
+    }
+  };
 
   ngOnInit() {
 
   }
 
-  // Register(data) {
-  // console.log(data);
-  // this.TripmelaService.signup(data);  
-  //   }
+  Register(data) {
+    console.log(data);
+    this.TripmelaService.signup(data)
+      .subscribe(
+        (Response) => {
+          console.log(Response);
+          alert('succefully registered');
+          this.router.navigate(['login-signup']);
+        },
+        (err) => {
+          console.log("error", err);
+        }
+      )
   }
+}
 
 
 
