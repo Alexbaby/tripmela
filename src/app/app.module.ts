@@ -9,13 +9,17 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { FormsModule } from '@angular/forms';
 import { SignupLoginComponent } from './signup-login/signup-login.component';
 import { RouterModule}  from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     LoginSignupComponent,
-    SignupLoginComponent
+    SignupLoginComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
