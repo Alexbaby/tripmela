@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{ Router} from '@angular/router';
-import { login} from '../models/login';
+import { Router } from '@angular/router';
+import { login } from '../models/login';
+import { TripmelaService } from '../tripmela.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { login} from '../models/login';
 })
 export class LoginSignupComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private TripmelaService:TripmelaService) { }
   
 
   ngOnInit() {
@@ -25,6 +26,7 @@ export class LoginSignupComponent implements OnInit {
   // login function of user
   login_info(login) {
     console.log("logged user data",login);
+    // this.TripmelaService.login(data)
 
   }
 }
