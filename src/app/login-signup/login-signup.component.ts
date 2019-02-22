@@ -11,22 +11,22 @@ import { TripmelaService } from '../tripmela.service';
 })
 export class LoginSignupComponent implements OnInit {
 
-  constructor(private router:Router,private TripmelaService:TripmelaService) { }
-  
+  constructor(private router: Router, private TripmelaService: TripmelaService) { }
+
 
   ngOnInit() {
-    
+
   }
   // login model
-  login:login={
-    user_email:"",
-    user_password:""
+  login: login = {
+    username: "",
+    password: ""
   }
-   id = 0;
+  id = 0;
   // login function of user
   login_info(login) {
-    console.log("logged user data",login);
-    // this.TripmelaService.login(data)
+    console.log("logged user data", login);
+    this.TripmelaService.authorise(login);  
 
   }
 }

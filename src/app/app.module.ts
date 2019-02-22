@@ -9,7 +9,10 @@ import { SignupLoginComponent } from './signup-login/signup-login.component';
 import { RouterModule}  from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
+import { GlobalProvider} from './globalprovider';
+import { TripmelaService } from './tripmela.service';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -28,12 +31,13 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+
 
   
     // ReactiveFormsModule  
   ],
-  providers: [],
+  providers: [GlobalProvider,TripmelaService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
