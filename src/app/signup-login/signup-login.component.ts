@@ -12,7 +12,7 @@ import { TripmelaService } from '../tripmela.service';
 export class SignupLoginComponent implements OnInit {
 
   constructor(private router: Router,private TripmelaService:TripmelaService) { }
-  id = 1;
+   id = 1;
   register: register = {
     name: '',
     email: '',

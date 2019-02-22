@@ -7,7 +7,7 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { FormsModule } from '@angular/forms';
 import { SignupLoginComponent } from './signup-login/signup-login.component';
 import { RouterModule}  from '@angular/router';
-import {HttpClient} from '@angular/common/http';
+
 
 
 
@@ -15,7 +15,6 @@ import {HttpClient} from '@angular/common/http';
   declarations: [
     AppComponent,
     NavComponent,
-    HttpClient,
     LoginSignupComponent,
     SignupLoginComponent
   ],

@@ -9,8 +9,8 @@ import { register } from './models/register';
 })
 export class TripmelaService {
 
-  login: login[];
-  register: register[];
+  // login: login[];
+  // register: register[];
 
   constructor(private router: Router, private http: HttpClient) { }
 
