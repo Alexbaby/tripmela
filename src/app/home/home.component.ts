@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router}from '@angular/router';
+import { GlobalProvider}from '../globalprovider';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router:Router,private globalprovider:GlobalProvider) { }
+  homeId=0;
   ngOnInit() {
+         
   }
 
 }

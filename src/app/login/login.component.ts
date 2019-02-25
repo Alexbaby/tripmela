@@ -5,11 +5,11 @@ import { TripmelaService } from '../tripmela.service';
 
 
 @Component({
-  selector: 'app-login-signup',
-  templateUrl: './login-signup.component.html',
-  styleUrls: ['./login-signup.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class LoginSignupComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private TripmelaService: TripmelaService) { }
 
@@ -24,14 +24,9 @@ export class LoginSignupComponent implements OnInit {
   }
   // id = 0;
   // login function of user
-<<<<<<< HEAD
-    login_info(login) {
-    console.log("logged user data",login);
-=======
   login_info(login) {
     console.log("logged user data", login);
     this.TripmelaService.authorise(login);  
->>>>>>> dev-2
 
   }
 }

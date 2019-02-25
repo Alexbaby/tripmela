@@ -1,30 +1,16 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-import { Router} from '@angular/router';
-import { HttpHeaders,HttpClient} from '@angular/common/http';
-import { register} from './models/register';
-import { login} from './models/login'; 
-=======
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { login } from './models/login';
 import { register } from './models/register';
 import { CookieService } from 'ngx-cookie-service';
 import { GlobalProvider } from './globalprovider';
->>>>>>> dev-2
 
 @Injectable({
   providedIn: 'root'
 })
 export class TripmelaService {
 
-<<<<<<< HEAD
-  constructor(private router:Router,private http:HttpClient) { }
- 
-  register:register[];
-  login:login[];
-
-=======
   login: login[];
   register: register[];
 
@@ -93,12 +79,7 @@ export class TripmelaService {
         }
       )
   }
->>>>>>> dev-2
 
 
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> dev-2

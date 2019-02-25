@@ -1,10 +1,10 @@
-<div class="header-container">
+
+<div *ngIf="this.homeId==0" class="header-container">
     <div class="container-fluid">
       <div class="conatainer-fluid h-100">
         <!-- <app-login-signup ></app-login-signup> -->
         <!-- <app-signup-login></app-signup-login> -->
-        <router-outlet>
-        </router-outlet> 
+        <router-outlet></router-outlet> 
         <div class="header-info">
           <h1>WHY WITH US</h1>
           <h3>

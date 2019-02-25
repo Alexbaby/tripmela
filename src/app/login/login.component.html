@@ -1,36 +1,26 @@
 
 <div class="login-signup-block">
 
-<<<<<<< HEAD
-    <div *ngIf="user_email.invalid && (user_email.dirty || user_email.touched)" class="alert alert-danger">
-        <p *ngIf="user_email.errors.required">
-=======
     <input type="email" [(ngModel)]="login.username" name="username" id="username" required #username="ngModel" placeholder="Enter email"pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
 
     <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
 
         <p *ngIf="username.errors.required">
->>>>>>> dev-2
             email is required. 
         </p>
     </div>
 
     <input type="password" [(ngModel)]="login.password" name="password" id="password" required #password="ngModel" placeholder="Enter password">
 
-<<<<<<< HEAD
-    <div *ngIf="user_password.invalid && (user_password.dirty || user_password.touched)" class="alert alert-danger">
-        <p *ngIf="user_password.errors.required">
-=======
     <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
 
         <p *ngIf="password.errors.required">
->>>>>>> dev-2
             password is required
         </p>
         
     </div>
     <button type="button" (click)="login_info(login);">Login</button>
-    <p>Not a member?<a [routerLink]="['/signup-login']">Sign up</a> now</p>
+    <p>Not a member?<a [routerLink]="['/sign-up']">Sign up</a> now</p>
 </div>
 
 
