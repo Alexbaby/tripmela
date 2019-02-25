@@ -1,0 +1,42 @@
+html,body{
+    height: 100%;
+}
+
+.header-container .container-fluid{
+    background-image: url('/assets/img/bg-img-landing-page.png');
+    background-size: cover;
+    background-position: center;
+    padding-right:0;
+    padding-left:0;
+}
+.landingpage-header:after{
+    width: 100%;
+    background: rgba(19, 129, 214, 0.2);
+    height: calc(100% - 110px);
+    position: absolute;
+    top: 110px;
+    z-index: 1;
+}
+.header-info{
+    margin: 400px 0 100px 50px;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    text-align: left;
+    float: left;
+}
+.header-info::after{
+    clear: both;
+}
+.header-info h1{
+    margin-bottom:50px;
+    font-size: 48px;
+}
+.header-info h3{
+    font-size: 28px;
+}
+
+@media(max-width:1200px){
+    .header-info{
+        margin-top:50px;
+    }
+}
