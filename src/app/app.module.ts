@@ -10,11 +10,12 @@ import { RouterModule}  from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http'
-import { GlobalProvider } from './globalprovider';
-import {TripmelaService } from './tripmela.service';
+import { PackagesComponent } from './packages/packages.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { CookieService } from 'ngx-cookie-service';
-
+import { TripmelaService } from './tripmela.service';
+import { GlobalProvider } from './globalprovider';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { CookieService } from 'ngx-cookie-service';
     SignupLoginComponent,
     AboutComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    PackagesComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
