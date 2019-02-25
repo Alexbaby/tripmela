@@ -1,4 +1,5 @@
-<div *ngIf="this.id == 1" class="login-signup-block">
+
+<div  class="login-signup-block">
     <form #form="ngForm">
         <input type="text" [(ngModel)]="register.name" name="name" id="name" required placeholder="Enter name" #name="ngModel">
 
@@ -56,5 +57,5 @@
             <a [routerLink]="['/login-signup']">Login</a> now</p>
 
     </form>
-
+   
 </div>

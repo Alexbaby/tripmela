@@ -17,6 +17,7 @@ import { TripmelaService } from './tripmela.service';
 import { GlobalProvider } from './globalprovider';
 import {HttpClientModule} from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
