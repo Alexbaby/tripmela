@@ -9,7 +9,7 @@ import { GlobalProvider} from '../globalprovider';
 export class AboutComponent implements OnInit {
 
   constructor(private globalprovider:GlobalProvider) { }
-  aboutId=1;
+
   ngOnInit() {
   
   }
