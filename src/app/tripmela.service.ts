@@ -13,6 +13,7 @@ export class TripmelaService {
 
   login: login[];
   register: register[];
+  errors;
 
   constructor(private router: Router, private http: HttpClient, private CookieService: CookieService, public globalprovider: GlobalProvider) { }
 
@@ -37,49 +38,17 @@ export class TripmelaService {
         'Content-Type': 'application/json',
       })
     };
-    return this.http.post(url, body, httpOptions)
-      .subscribe(
-        (Response: any) => {
-          console.log('auth code', Response);
-          this.accesstoken(Response.data.authorization_code);
-
-        },
-        (err) => {
-          console.log('error', err);
-        }
-      );
+    return this.http.post(url, body, httpOptions);
+    
   }
 
-
-  accesstoken(authtoken) {
-    console.log("authorization code", authtoken);
-    let url = "api/trip/accesstoken";
-    let data = { "authorization_code": authtoken };
-    let httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      })
-    };
-    return this.http.post(url, data, httpOptions)
-      .subscribe(
-        (response: any) => {
-          console.log('accesstoken:=', response);
-          console.log("token", response.data.access_token);
-          this.CookieService.set('accesstoken:', response.data.access_token);
-          if (this.CookieService.check('accesstoken')) {
-            this.globalprovider.Guest = false;
-            console.log("Username:" + this.globalprovider.username);
-          } else {
-            this.globalprovider.Guest = true;
-          }
-
-        },
-        (err) => {
-          console.log('error', err);
-        }
-      )
+  dispalyPkg(){
+    console.log('dispaly pkg');
+    let url = "api/trip/list_packages";
+   return this.http.get(url);
+   
   }
-
+   
 
 }
 
