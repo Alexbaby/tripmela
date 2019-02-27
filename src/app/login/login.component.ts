@@ -15,7 +15,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private TripmelaService: TripmelaService, private CookieService: CookieService, public globalprovider: GlobalProvider, private http: HttpClient) { }
+  constructor(private router: Router, private TripmelaService: TripmelaService, private CookieService: CookieService, public global: GlobalProvider, private http: HttpClient) { }
 
 
   ngOnInit() {
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  accesstoken(authtoken) {
+  accesstoken(authtoken){
 
     console.log("authorization code", authtoken);
     let url = "api/trip/accesstoken";
@@ -64,25 +64,27 @@ export class LoginComponent implements OnInit {
     return this.http.post(url, data, httpOptions)
       .subscribe(
         (response: any) => {
-          console.log('accesstoken:=', response);
-          console.log("token", response.data.access_token);
-          console.log('name:', response.data.name);
-          this.CookieService.set('username:',response.data.name);
+          console.log('accesstoken:=', response);                                         
           this.CookieService.set('accesstoken:', response.data.access_token);
-          if (this.CookieService.check('accesstoken')) {
-            this.globalprovider.Guest = false;
-            console.log("Username:" + this.globalprovider.username);
+          this.CookieService.set('username:',response.data.name);
+          if (this.CookieService.check('accesstoken:')) {
+            this.global.Guest = false;
           } else {
-            this.globalprovider.Guest = true;
+            this.global.Guest = true;
           }
-          let at = this.CookieService.get('accesstoken');
-          console.log('AccessTn:' + at);
-        
+          let At = this.CookieService.get('accesstoken:');
+          console.log('accessT:'+At);
+          let Un = this.CookieService.get('username:');
+          this.global.username = Un;
+          console.log('cookie Uname:'+Un);
+          this.router.navigate(['/home'])
         },
         (err) => {
           console.log('error', err);
         }
+        
       );
+     
   }
-
+  
 }

@@ -29,13 +29,13 @@ html,body{
     margin-top: 50px;
 }
 .location .bg-1{
-    background-color: rgba(176, 154, 217, 0.13);
+    background-color: rgba(227, 223, 235, 0.945);
 }
 .location .bg-2{
-    background-color: #8be219bd;
+    background-color: hsla(195, 77%, 63%, 0.412);
 }
 .location .bg-3{
-    background-color: rgba(19, 201, 19, 0.664);
+    background-color: rgba(113, 141, 233, 0.945);
 }
 .bg-4{
     background-color: #4C6375;
@@ -75,7 +75,7 @@ html,body{
 }
 .header-info{
     margin: 400px 0 100px 50px;
-    color: rgb(18, 196, 33);
+    color: rgb(239, 243, 239);
     width: 60%;
     text-align: left;
     float: left;

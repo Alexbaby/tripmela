@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
 export class GlobalProvider {
       Guest = true;
       username="";
-      homeid = 1;
+      currentPage = 'login'
+      
 
    constructor() {
 

@@ -15,7 +15,7 @@ export class TripmelaService {
   register: register[];
   errors;
 
-  constructor(private router: Router, private http: HttpClient, private CookieService: CookieService, public globalprovider: GlobalProvider) { }
+  constructor(private router: Router, private http: HttpClient, private CookieService: CookieService, public global: GlobalProvider) { }
 
   signup(data) {
     console.log('user registration', data);

@@ -10,7 +10,7 @@ import { TripmelaService } from '../tripmela.service';
 export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private globalprovider: GlobalProvider, private TripmelaService: TripmelaService) { }
-  homeId = 0;
+
   pkg;
   ngOnInit() {
     this.dispalyPkg();

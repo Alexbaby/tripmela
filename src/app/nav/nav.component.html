@@ -12,11 +12,20 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a  [routerLink]="['/home']">Home</a></li>
-        <li> <a  [routerLink]="['/about']">About Us</a></li>
+        <li class="active" style="color: tan"><a  [routerLink]="['/home']">Home</a></li>
+        <li> <a  [ngClass]="{'active' : global.currentPage=='about'}" *ngIf="global.Guest" [routerLink]="['/about']">About Us</a></li>
         <li><a  [routerLink]="['/packages']">packages</a></li>
         <li><a  [routerLink]="['/gallery']">Gallery</a></li>
         <li><a  [routerLink]="['/contact']">Contact Us</a></li>
+        <!-- <li *ngIf="!global.Guest">{{global.username}}</li> -->
+        <li>
+          <div class="dropdown" *ngIf="!global.Guest">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{global.username}}<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">logout</a></li>              
+            </ul>
+          </div>
+        </li>
       </ul>    
     </div>
   </div>
