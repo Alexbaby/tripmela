@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
 
   constructor(private router: Router, private TripmelaService: TripmelaService) { }
   //  id = 1;
-   register: register = {
+  register: register = {
     name: '',
     email: '',
     phone: '',
@@ -21,27 +21,11 @@ export class SignUpComponent implements OnInit {
 
   };
 
-  username;
-  emailvallidation;
-  userphone;
-  pass1;
-  pass2;
-  emailchk;
-
-  errors = {
-
-    username: {
-      name_error: 'pleasse enter the name',
-    },
-
-    email: {
-      email_not_valid: 'not a valid email',
-    },
-
-    password: {
-      password_error: 'password mis match'
-    }
-  };
+  usernameError;
+  passwordError
+  phoneError;
+  emailError;
+  errors;
 
   ngOnInit() {
 
@@ -58,6 +42,11 @@ export class SignUpComponent implements OnInit {
         },
         (err) => {
           console.log("error", err);
+          this.errors = err.error.errors;
+          this.usernameError = this.errors.name;
+          this.emailError = this.errors.email;
+          this.phoneError = this.errors.phone;
+          this.passwordError = this.errors.password;
         }
       )
   }

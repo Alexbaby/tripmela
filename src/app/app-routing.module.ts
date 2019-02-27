@@ -8,24 +8,22 @@ import { PackagesComponent } from './packages/packages.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
-  
-  { 
-    path: '', 
-    component: HomeComponent, 
+
+  {
+    path: '',
+    component: HomeComponent,
     children: [
       { path: '', redirectTo: '/login', pathMatch: 'full' },
       { path: 'sign-up', component: SignUpComponent },
       { path: 'login', component: LoginComponent }
-    ] 
+    ]
   },
-  // { path: 'home',component:HomeComponent },
+
   { path: 'about', component: AboutComponent },
-  { path: 'packages', component:PackagesComponent },
-  { path: 'gallery',component:GalleryComponent },
-  // { path: 'login-signup', component: LoginSignupComponent },
-  // { path: 'signup-login',component:SignupLoginComponent },
+  { path: 'packages', component: PackagesComponent },
+  { path: 'gallery', component: GalleryComponent },
   { path: '**', redirectTo: '/login', pathMatch: 'full' },
-  // { path: '**', component: LoginSignupComponent }, 
+
 ];
 
 @NgModule({

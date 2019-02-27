@@ -34,3 +34,9 @@
     margin-top: 50px;
 }
 }
+
+.dropdown .btn{
+    background: transparent;
+    color: #fff;
+    padding-top: 23%;
+   }

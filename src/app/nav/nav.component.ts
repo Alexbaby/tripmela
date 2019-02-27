@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {GlobalProvider}  from '../globalprovider';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public global:GlobalProvider) { }
 
   ngOnInit() {
   }
