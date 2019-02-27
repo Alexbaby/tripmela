@@ -44,6 +44,23 @@ html,body{
     background-color: #000;
     color:rgb(190, 190, 190);
 }
+.bg-8{
+    background-color:#97B7D0;
+}
+.testimoney-sec{
+    height:600px;
+}
+.testimoney-sec h1,hr{
+    color:#fff;
+}
+.testimoney-sec hr{
+    width:200px;
+    border:0;
+    border-bottom:4px solid #fff;
+}
+.testimoney-sec img{
+    width: 100%;
+}
 .contact h1{
     color:#fff;
 }
