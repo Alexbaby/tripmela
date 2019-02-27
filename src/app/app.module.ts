@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { SignupLoginComponent } from './signup-login/signup-login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { RouterModule}  from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
@@ -17,12 +17,13 @@ import { TripmelaService } from './tripmela.service';
 import { GlobalProvider } from './globalprovider';
 import {HttpClientModule} from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    LoginSignupComponent,
-    SignupLoginComponent,
+    LoginComponent,
+    SignUpComponent,
     AboutComponent,
     FooterComponent,
     HomeComponent,

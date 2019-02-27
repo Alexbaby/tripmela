@@ -6,6 +6,7 @@ export class GlobalProvider {
     //   currentPage='login';
     //   API_ENDPOINT='';
       username="";
+      homeid = 1;
     //   userid="";
     //   page=""
    constructor() {

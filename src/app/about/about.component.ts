@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalProvider} from '../globalprovider';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
-  // aboutId = 1;
+  constructor(private globalprovider:GlobalProvider) { }
+  aboutId=1;
   ngOnInit() {
+  
   }
  
 }

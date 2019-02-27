@@ -1,0 +1,61 @@
+
+<div  class="login-signup-block">
+    <form #form="ngForm">
+        <input type="text" [(ngModel)]="register.name" name="name" id="name" required placeholder="Enter name" #name="ngModel">
+
+   
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+            <p *ngIf="name.errors.required">
+                name is required.
+            </p>
+        </div>
+
+        <input type="email" [(ngModel)]="register.email" name="email" id="email" required placeholder="Enter email" #email="ngModel" >
+        
+ 
+   <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+
+            <p *ngIf="email.errors.required">
+                email is required
+         </p>
+                    
+        </div> 
+
+        <input type="text" [(ngModel)]="register.phone" name="phone" id="user_phone" required placeholder="Enter phone" #phone="ngModel">
+
+        <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+
+            <p *ngIf="phone.errors.required">
+                phone is required.
+            </p>
+        </div>
+
+        <input type="password" [(ngModel)]="register.password" name="password" id="user_password" required placeholder="Enter password"
+            #password="ngModel">
+
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+
+            <p *ngIf="password.errors.required">
+                password is required
+            </p>
+        </div>
+
+        <!-- <input type="password" [(ngModel)]="register.password2" name="password2" id="password2" required placeholder="Confirm password"
+            #password2="ngModel">
+
+        <div *ngIf="password2.invalid && (password2.dirty || password2.touched)" class="alert alert-danger">
+
+            <p *ngIf="password2.errors.required">
+                password is required
+            </p>
+        </div> -->
+        
+        <button type="button" [disabled]="form.invalid" class="btn btn-primary"  (click)="Register(register);">Register</button>
+        <p>Already a member?
+            <a [routerLink]="['/login']">Login</a> now</p>
+
+    </form>
+   
+</div>
