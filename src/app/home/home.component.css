@@ -3,7 +3,7 @@ html,body{
 }
 
 .header-container .container-fluid{
-    background-image: url('/assets/img/bg-img-landing-page.png');
+    background-image: url('/assets/img/6399.jpg');
     background-size: cover;
     background-position: center;
     padding-right:0;
@@ -29,20 +29,20 @@ html,body{
     margin-top: 50px;
 }
 .location .bg-1{
-    background-color: #9ABED9;
+    background-color: rgba(227, 223, 235, 0.945);
 }
 .location .bg-2{
-    background-color: #78AED8;
+    background-color: hsla(195, 77%, 63%, 0.412);
 }
 .location .bg-3{
-    background-color: #9ABED9;
+    background-color: rgba(113, 141, 233, 0.945);
 }
 .bg-4{
     background-color: #4C6375;
 }
 .bg-5{
     background-color: #000;
-    color:rgb(190, 190, 190);
+    color:rgba(237, 83, 41, 0.13);
 }
 .bg-8{
     background-color:#97B7D0;
@@ -92,7 +92,7 @@ html,body{
 }
 .header-info{
     margin: 400px 0 100px 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(2, 12, 19);
     width: 60%;
     text-align: left;
     float: left;
@@ -113,4 +113,6 @@ html,body{
         margin-top:50px;
     }
 }
+
+
 
