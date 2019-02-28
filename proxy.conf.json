@@ -1,6 +1,6 @@
 {
  "/api/": {
-   "target": "http://localhost/trip/trip_backend/backend/web/",
+   "target": "http://localhost/trip/trip_backend/backend/web/index.php",
    "secure": false,
    "changeOrigin": true,
    "pathRewrite": {"^/api" : ""}

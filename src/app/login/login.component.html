@@ -1,27 +1,29 @@
-
+<form (keydown.enter)="login_info(login)">
+    
 <div class="login-signup-block" *ngIf="!global.username">
 
-    <input type="email" [(ngModel)]="login.username" name="username" id="username" required #username="ngModel" placeholder="Enter email"pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
-
-    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
-
-        <p *ngIf="username.errors.required">
-            email is required. 
-        </p>
+        <input type="email" [(ngModel)]="login.username" name="username" id="username" required #username="ngModel" placeholder="Enter email"pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+    
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+    
+            <p *ngIf="username.errors.required">
+                email is required. 
+            </p>
+        </div>
+        <p style="color: red" *ngIf="errors">{{loginusername_Error}}</p>
+    
+        <input type="password" [(ngModel)]="login.password" name="password" id="password" required #password="ngModel" placeholder="Enter password">
+    
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+    
+            <p *ngIf="password.errors.required">
+                password is required
+            </p>     
+        </div>
+        <p style="color: red" *ngIf="errors">{{loginpassword_Error}}</p>
+        <button type="submit" (click)="login_info(login);">Login</button>
+        <p>Not a member?<a [routerLink]="['/sign-up']">Sign up</a> now</p>
     </div>
-    <p style="color: red" *ngIf="errors">{{loginusername_Error}}</p>
-
-    <input type="password" [(ngModel)]="login.password" name="password" id="password" required #password="ngModel" placeholder="Enter password">
-
-    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
-
-        <p *ngIf="password.errors.required">
-            password is required
-        </p>     
-    </div>
-    <p style="color: red" *ngIf="errors">{{loginpassword_Error}}</p>
-    <button type="button" (click)="login_info(login);">Login</button>
-    <p>Not a member?<a [routerLink]="['/sign-up']">Sign up</a> now</p>
-</div>
+</form>
 
 
