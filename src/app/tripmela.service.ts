@@ -29,7 +29,7 @@ export class TripmelaService {
     return this.http.post(url, body, httpOptions);
   }
 
-   authorise(logindata) {
+  authorise(logindata) {
     console.log('logged user details', logindata);
     let body = JSON.stringify(logindata);
     let url = "api/trip/authorize";
@@ -48,10 +48,10 @@ export class TripmelaService {
     return this.http.get(url);
 
   }
-   singlepkgview(id){
-    console.log('inside singlepkg view', id);
-    console.log('package id',id);
+  singlepkgview(id) {
+    console.log('inside this singlepkgview', id);
     let url = `api/trip/view_package?id=${id}`;
+    console.log('url', url);
     return this.http.get(url);
   }
 
