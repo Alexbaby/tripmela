@@ -20,11 +20,43 @@ h1{
     border-bottom: 4px solid #fff;
     width: 200px;
 }
+
 .contact .col-lg-4{
     text-align: center;
-    padding: 20px 20px 50px 20px;
+    padding: 0px 20px 50px 20px;
     color:#fff;
 }
 .contact .col-lg-4 img{
     padding: 20px;
+}
+.contact-form input{
+    width: 300px;
+    height: 60px;
+    margin: 20px;
+    padding: 5px;
+}
+.contact-form input::placeholder{
+
+}
+.contact-form textarea{
+    width: 300px;
+    height: 160px;
+    margin: 20px;
+}
+.contact-form button{
+    width: 300px;
+    height: 70px;
+    margin: 10px 20px 20px 20px;
+    background-color: #1381D6;
+    color:#fff;
+    border: none;
+}
+.contact-form button:hover{
+    box-shadow: 4px 4px 6px #3c33336b;
+}
+.contact-info{
+    color:#fff;
+}
+.socialmedia-icon img{
+    margin:10px;
 }
