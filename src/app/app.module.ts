@@ -15,7 +15,9 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CookieService } from 'ngx-cookie-service';
 import { TripmelaService } from './tripmela.service';
 import { GlobalProvider } from './globalprovider';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
+import { SinglepkgComponent } from './singlepkg/singlepkg.component';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     PackagesComponent,
-    GalleryComponent
+    GalleryComponent,
+    SinglepkgComponent,
   ],
   imports: [
     BrowserModule,
