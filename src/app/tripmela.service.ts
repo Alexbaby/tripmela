@@ -48,9 +48,9 @@ export class TripmelaService {
     return this.http.get(url);
 
   }
-  singlepkgview(id) {
-    console.log('inside this singlepkgview', id);
-    let url = `api/trip/view_package?id=${id}`;
+  singlepkgview(pkg) {
+    console.log('inside this singlepkgview',pkg);
+    let url = `api/trip/view_package?id=${pkg.id}`;
     console.log('url', url);
     return this.http.get(url);
   }

@@ -17,20 +17,23 @@ export class SinglepkgComponent implements OnInit {
 
                 console.log('id get here');
                 this.activeroute.params.subscribe(paramsId => {
-                  let id = paramsId;
+                  let id = paramsId; 
                   console.log('pkg id:'+id);
                   this.TripmelaService.singlepkgview(id)
                     .subscribe(
-                                  (Response) => {
+                                  (Response:any) => {
                                     console.log('pkg details', Response);
+                                    let data = Response.data;
+                                    console.log('data',data);
                                   },
                             (err) => {
                                   console.log('error', err);
-                                }
-                    );
+                                    }
+                             );
 
-                })
+                                                             });
 
               }
+             
 
             }
