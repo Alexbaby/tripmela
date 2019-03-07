@@ -39,16 +39,22 @@ export class TripmelaService {
       })
     };
     return this.http.post(url, body, httpOptions);
-    
+
   }
 
-  dispalyPkg(){
+  dispalyPkg() {
     console.log('dispaly pkg');
     let url = "api/trip/list_packages";
-   return this.http.get(url);
-   
+    return this.http.get(url);
+
   }
-   
+  singlepkgview(id) {
+    console.log('inside this singlepkgview', id);
+    let url = `api/trip/view_package?id=${id}`;
+    console.log('url', url);
+    return this.http.get(url);
+  }
+
 
 }
 

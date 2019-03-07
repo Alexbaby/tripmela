@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TripmelaService } from '../tripmela.service';
 @Component({
@@ -9,7 +9,7 @@ import { TripmelaService } from '../tripmela.service';
 })
 export class PackagesComponent implements OnInit {
 
-  constructor(private router: Router,private http: HttpClient,private TripmelaService: TripmelaService) { }
+  constructor(private router: Router,private http: HttpClient,private TripmelaService: TripmelaService,private ActivatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
     this.packages();
