@@ -23,8 +23,9 @@ export class SinglepkgComponent implements OnInit {
                     .subscribe(
                                   (Response:any) => {
                                     console.log('pkg details', Response);
-                                    let data = Response.data;
-                                    console.log('data',data);
+                                    let data = Response.data.data;
+                                   
+
                                   },
                             (err) => {
                                   console.log('error', err);

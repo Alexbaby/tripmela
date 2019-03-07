@@ -22,7 +22,13 @@
     font-size: 18px;
     line-height: 20px;
 }
+.dropdown img{
+    width: 20px;
 
+}
+.dropdown .btn .caret {
+    margin-left: 5px;
+}
 @media (min-width: 768px){
 .navbar {
     border-radius: inherit !important;
