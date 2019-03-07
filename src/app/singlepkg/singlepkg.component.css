@@ -2,6 +2,10 @@
     width: 100%;
     height:auto;
 }
+.package-details h1 hr{
+    border:none;
+    border-bottom:2px solid rgb(216, 216, 216); 
+}
 .mt-5{
     margin-top:50px; 
 }
