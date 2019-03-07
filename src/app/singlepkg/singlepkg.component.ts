@@ -11,7 +11,14 @@ import { TripmelaService } from '../tripmela.service';
 export class SinglepkgComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient, private TripmelaService: TripmelaService, private activeroute: ActivatedRoute) { }
-
+ 
+   data = {
+            name:" ",
+            agency:" ",
+            start:" ",
+            end:" ",
+            rate:" "
+         }
 
   ngOnInit() {
 
@@ -23,7 +30,7 @@ export class SinglepkgComponent implements OnInit {
                     .subscribe(
                                   (Response:any) => {
                                     console.log('pkg details', Response);
-                                    let data = Response.data.data;
+                                    this.data = Response.data;
                                    
 
                                   },
