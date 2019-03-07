@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TripmelaService } from '../tripmela.service';
+import { GlobalProvider } from '../globalprovider';
+import { CookieService } from 'ngx-cookie-service';
+
+
 
 @Component({
   selector: 'app-singlepkg',
@@ -10,7 +14,7 @@ import { TripmelaService } from '../tripmela.service';
 })
 export class SinglepkgComponent implements OnInit {
 
-  constructor(private router: Router, private http: HttpClient, private TripmelaService: TripmelaService, private activeroute: ActivatedRoute) { }
+  constructor(private router: Router, private http: HttpClient, private TripmelaService: TripmelaService, private activeroute: ActivatedRoute,public global: GlobalProvider,private CookieService: CookieService) { }
  
    data = {
             name:" ",
@@ -18,7 +22,14 @@ export class SinglepkgComponent implements OnInit {
             start:" ",
             end:" ",
             rate:" "
-         }
+         };
+
+   pkg = {
+         
+         number:"",
+         datepicker:""
+
+       };      
 
   ngOnInit() {
 
@@ -41,6 +52,28 @@ export class SinglepkgComponent implements OnInit {
 
                                                              });
 
+              }
+
+              countchange(e)
+              {
+                    console.log('inside this count change',e);
+                    let selectedItem;
+                    selectedItem = e.target.value;
+                    console.log(' changed value',selectedItem);                
+              }
+              
+              beforeConirm(data)
+              {
+                
+                console.log('inside  beforeConirm')
+              let uname = this.global.username;
+         
+              // console.log('name:=',uname);
+
+          
+                  
+
+               
               }
              
 

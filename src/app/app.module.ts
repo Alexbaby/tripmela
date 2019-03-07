@@ -17,7 +17,7 @@ import { TripmelaService } from './tripmela.service';
 import { GlobalProvider } from './globalprovider';
 import { HttpClientModule} from '@angular/common/http';
 import { SinglepkgComponent } from './singlepkg/singlepkg.component';
-
+import { NgDatepickerModule } from 'ng2-datepicker';
 
 
 @NgModule({
@@ -39,12 +39,13 @@ import { SinglepkgComponent } from './singlepkg/singlepkg.component';
     FormsModule,
     RouterModule,
     HttpClientModule,
+    NgDatepickerModule 
 
 
   
     // ReactiveFormsModule  
   ],
-  providers: [GlobalProvider,TripmelaService,CookieService],
+  providers: [GlobalProvider,TripmelaService,CookieService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

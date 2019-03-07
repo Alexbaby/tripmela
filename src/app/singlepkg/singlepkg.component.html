@@ -10,13 +10,33 @@
          <h4 style="color:  royalblue" >AGENCY: {{data.agency}}</h4>
          <h4 style="color:  royalblue" >START: {{data.start}}</h4>
          <h4 style="color:  royalblue" >END: {{data.end}}</h4>
-         <h4 style="color:  royalblue" >RATE: {{data.rate}}</h4>
+         <h4 style="color:  rgb(83, 95, 131)" >RATE: {{data.rate}}</h4>
         </div>
       </div>
     </div>
 
     <div class="col-lg-6 package-details mt-5 mb-5">
-      <h1>Package Aggregator <hr></h1>
+      <h1>{{data.agency}}<hr></h1>
+      <!-- Number of persons:<input type="text" name="number" placeholder="include childrens" (change)="countchange($event)"><br>
+      <p>{{selectedItem}}</p>
+      <button type="button"  class="btn btn-info">confirm</button> -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Total number of persons</h4>
+              <input type="text" name="number" placeholder="include childrens" (change)="countchange($event)" [(ngModel)]="pkg.number">
+              <h4 class="card-title">Select date</h4>
+              <input type="date" name="datepicker" [(ngModel)]="pkg.datepicker">
+              <br>
+              <br>
+             <button type="button" class="btn btn-info" (click)="beforeConirm(pkg);">confirm</button>
+             
+            </div>
+          </div>
+        </div>
+
+        
       
     </div>
   </div>
