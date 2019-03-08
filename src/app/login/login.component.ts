@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
+    
+
   }
   // login model
   login: login = {
@@ -64,7 +66,13 @@ export class LoginComponent implements OnInit {
     return this.http.post(url, data, httpOptions)
       .subscribe(
         (response: any) => {
-          console.log('accesstoken:=', response);                                         
+          console.log('accesstoken:=', response);                
+          
+        //   let expire = new Date();
+        //  let time = Date.now() + ((3600 * 1000) * 1 ); // current time + 1 hr
+        //   expire.setTime(time);
+        //   console.log('time',expire);
+          
           this.CookieService.set('accesstoken:', response.data.access_token);
           this.CookieService.set('username:',response.data.name);
           if (this.CookieService.check('accesstoken:')) {

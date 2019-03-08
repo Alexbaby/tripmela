@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalProvider } from '../globalprovider';
 import { TripmelaService } from '../tripmela.service';
+import {CookieService} from 'ngx-cookie-service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +10,9 @@ import { TripmelaService } from '../tripmela.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private globalprovider: GlobalProvider, private TripmelaService: TripmelaService) { }
+  constructor(private router: Router, private global: GlobalProvider, private TripmelaService: TripmelaService,private CookieService: CookieService) { 
+    
+   }
 
   pkg;
   ngOnInit() {

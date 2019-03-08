@@ -19,9 +19,10 @@
         <li><a  [routerLink]="['/contact']">Contact Us</a></li>
         <!-- <li *ngIf="!global.Guest">{{global.username}}</li> -->
         <li>
-          <div class="dropdown" *ngIf="!global.Guest">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="/assets/img/frame.png"><span class="caret"></span></button>
+          <div class="dropdown" *ngIf="!global.Guest" >
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="/assets/img/frame.png">{{global.username}}<span class="caret"></span></button>
             <ul class="dropdown-menu">
+             <!-- <li *ngIf="!global.Guest">{{global.username}}</li> -->
               <li><a>My Trips</a></li>  
               <li><a>Loyality Point</a></li>
               <li><a>Manage Accounts</a></li>

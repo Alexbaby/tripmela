@@ -29,12 +29,13 @@ export class SinglepkgComponent implements OnInit {
          number:"",
          datepicker:""
 
-       };      
+       };   
+       
 
   ngOnInit() {
 
                 console.log('id get here');
-                this.activeroute.params.subscribe(paramsId => {
+                 this.activeroute.params.subscribe(paramsId => {
                   let id = paramsId; 
                   console.log('pkg id:'+id);
                   this.TripmelaService.singlepkgview(id)
@@ -50,7 +51,7 @@ export class SinglepkgComponent implements OnInit {
                                     }
                              );
 
-                                                             });
+                                                  });
 
               }
 
@@ -63,12 +64,33 @@ export class SinglepkgComponent implements OnInit {
               }
               
               beforeConirm(data)
-              {
+              { 
+                 console.log('inside  beforeConirm',data);
+
+               let pkgdata = {
+                                number :data.number,
+                                date: data.datepicker
+                             }
+
+                            localStorage.setItem('number:',pkgdata.number);
+                            localStorage.setItem('date:',pkgdata.date);
                 
-                console.log('inside  beforeConirm')
-              let uname = this.global.username;
-         
-              // console.log('name:=',uname);
+              
+                 let uname = this.global.username
+                
+                if(uname!='')
+                {
+                  this.router.navigate(['/pkgConfirmation']);
+                 
+                }
+
+                if(uname =='')
+                {
+                      alert('login first');
+                      this.router.navigate(['/login']);
+                }
+
+             
 
           
                   

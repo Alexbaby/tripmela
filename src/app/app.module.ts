@@ -18,6 +18,7 @@ import { GlobalProvider } from './globalprovider';
 import { HttpClientModule} from '@angular/common/http';
 import { SinglepkgComponent } from './singlepkg/singlepkg.component';
 import { NgDatepickerModule } from 'ng2-datepicker';
+import { PkgConfirmationComponent } from './pkg-confirmation/pkg-confirmation.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { NgDatepickerModule } from 'ng2-datepicker';
     PackagesComponent,
     GalleryComponent,
     SinglepkgComponent,
+    PkgConfirmationComponent,
   ],
   imports: [
     BrowserModule,
